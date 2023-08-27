@@ -12,19 +12,6 @@ appwrite
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject('64e99e2a6f083eaca059');
 
-//     const account = new Account(appwrite);
-
-// // Register User
-// account.create(
-//     'me@example.com',
-//     'password',
-//     'Jane Doe'
-// ).then(response => {
-//     console.log(response);
-// }, error => {
-//     console.log(error);
-// });
-
 export const databases= new Databases(appwrite);
 
 export default appwrite;
