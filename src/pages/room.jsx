@@ -19,17 +19,26 @@ const Room = () => {
   }
   return (
     //display the messages
+    <main className='contsiner'>
+    <div className='room--container'>
+
+    
     <div>
       {messages.map(message => (
-        <div key={message.$id}>
-          <div>{message.$createdAt}</div> //display the date
+        <div key={message.$id} className='messages--wrapper'>
 
-          <div>
-            <span>{message.body}</span> //display the message
+          <div className='message--header'>
+          <small className='message-timestamp'>{message.$createdAt}</small>
+          </div> 
+
+          <div className='message--body'>
+            <span>{message.body}</span>
           </div>
         </div>
       ))}
     </div>
+    </div>
+    </main>
   )
   
 }
