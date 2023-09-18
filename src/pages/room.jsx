@@ -6,6 +6,7 @@ import client, {
 } from "../AppwriteConfig";
 import { ID } from "appwrite";
 import { Trash } from "react-feather";
+import Header from "../components/header";
 
 const Room = () => {
   //set the messages state
@@ -93,7 +94,8 @@ const Room = () => {
 
   return (
     //display the messages
-    <main className="contsiner">
+    <main className="container">
+      <Header/>
       <div className="room--container">
         <div>
           {messages.map((message) => (
