@@ -19,7 +19,7 @@ Create a pull request to the main branch of the original repository.
 
 Wait for your pull request to be reviewed and merged.
 
-Thank you for contributing to BaaS-ChatApp!
+Thank you for contributing to appwrite-ChatApp!
 
 ## License
 By contributing to BaaS-ChatApp, you agree that your contributions will be licensed under the MIT License.
