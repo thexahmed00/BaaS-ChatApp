@@ -4,11 +4,15 @@ import client, {
   DATABASE_ID,
   databases,
 } from "../AppwriteConfig";
-import { ID } from "appwrite";
+import { ID,Permission, Role  } from "appwrite";
 import { Trash } from "react-feather";
 import Header from "../components/header";
 
+import  {useAuth}  from "../utils/AuthContext";
+
+
 const Room = () => {
+  const {user} = useAuth();
   //set the messages state
   const [messages, setMessages] = useState([]);
   const [messageBody, setMessageBody] = useState("");
@@ -51,15 +55,22 @@ const Room = () => {
   //post the message to the database
   const postMessage = async (e) => {
     e.preventDefault();
-    const payload = {
-      body: messageBody,
+    let payload = {
+      "user-id": user.$id,
+      "username": user.name,
+      "body": messageBody
     };
+
+    let permissions = [
+      Permission.write(Role.user(user.$id))
+        ];
     //const message = e.target.message.value
     const response = await databases.createDocument(
       DATABASE_ID,
       COLLECTION_ID,
       ID.unique(),
-      payload
+      payload,
+      permissions
     );
     console.log("messagePosted: ", response);
     //setMessages(prevState=>[...prevState,response])
@@ -101,14 +112,20 @@ const Room = () => {
           {messages.map((message) => (
             <div key={message.$id} className="messages--wrapper">
               <div className="message--header">
+                <p>
+                  {message?.username ?(<span> {message.username}</span>):(<span>Anonymous</span>)}
+                </p>
                 <small className="message-timestamp">
                   {" "}
                   {formatTimestamp(message.$createdAt)}
                 </small>
-                <Trash
+                {message.$permissions.includes(`delete(\"user:${user.$id}\")`) && (
+                  <Trash
                   className="delete-icon"
                   onClick={() => deleteMessage(message.$id)}
-                />
+                />)
+                  }
+               
                 {/* <button className='btn btn--secondary' onClick={()=>deleteMessage(message.$id)}>Delete</button> */}
               </div>
 
