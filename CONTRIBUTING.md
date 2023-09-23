@@ -1,5 +1,5 @@
 # Contributing
-We welcome contributions to BaaS-ChatApp! To contribute, please follow these guidelines:
+We welcome contributions to Appwrite-ChatApp! To contribute, please follow these guidelines:
 
 Fork the repository and clone it to your local machine.
 
