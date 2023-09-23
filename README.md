@@ -7,7 +7,7 @@ Welcome to the Appwrite-ChatApp repository! This is a chat application built usi
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](##usage)
-- [Contributing](#contributing)
+- [Contributing](CONTRIBUTING.md)
 - [License](##license)
 
 ## Features
