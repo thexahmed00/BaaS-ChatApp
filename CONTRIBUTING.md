@@ -1,6 +1,6 @@
-# BaaS-ChatApp
+# Appwrite-ChatApp
 
-Welcome to the BaaS-ChatApp repository! This is a chat application built using Backend as a Service (BaaS) technologies. It allows users to chat with each other in real-time.
+Welcome to the Appwrite-ChatApp repository! This is a chat application built using Backend as a Service (BaaS) technologies. It allows users to chat with each other in real-time.
 
 ## Table of Contents
 
