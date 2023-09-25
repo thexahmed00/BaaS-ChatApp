@@ -1,4 +1,4 @@
-import './App.css'
+// import './App.css'
 import { BrowserRouter as Router,Routes,Route  } from 'react-router-dom'
 import PrivateRoutes from './components/privateRoutes'
 import Login from './pages/login'

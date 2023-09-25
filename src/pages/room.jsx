@@ -121,7 +121,7 @@ const Room = () => {
                 </small>
                 {message.$permissions.includes(`delete(\"user:${user.$id}\")`) && (
                   <Trash
-                  className="delete-icon"
+                  className="delete--btn"
                   onClick={() => deleteMessage(message.$id)}
                 />)
                   }
@@ -129,7 +129,7 @@ const Room = () => {
                 {/* <button className='btn btn--secondary' onClick={()=>deleteMessage(message.$id)}>Delete</button> */}
               </div>
 
-              <div className="message--body">
+              <div data-owner={message["user-id"] === user.$id} className="message--body">
                 <span>{message.body}</span>
               </div>
             </div>
