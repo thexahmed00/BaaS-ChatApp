@@ -143,14 +143,23 @@ button.btn--submit:active {
   border-bottom: none;
 }
 
+#header--wrapper p {
+  font-size: 1em;
+  color: #fff;
+}
+
+#header--wrapper p span {
+  color: #54546C;
+}
+
 .header--link {
-  color: #c7d8eb;
+  color: #494960;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .header--link:hover {
-  color: #8db3dd;
+  color: var(--themeColorMain);
 }
 
 /* Room Styling */
