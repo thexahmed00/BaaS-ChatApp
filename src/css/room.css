@@ -1,6 +1,5 @@
 :root {
     --grid-unit: 16px;
-
     --spacing-0: 0;
     /* 0px */
     --spacing-1: 0.5em;
@@ -17,4 +16,22 @@
     /* 48px */
     --spacing-7: 3.5em;
     /* 56px */
+}
+
+.room--container--wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.messages--wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.message--sent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

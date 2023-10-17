@@ -159,12 +159,17 @@ textarea {
   align-items: center;
 }
 
+.message--header p span {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
 .message--body {
   padding: 0.5em 0;
   color: var(--textColorSecondary);
   background-color: var(--themeColorMain);
-  padding: 1em;
-  border-radius: 20px;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: 18px;
   width: fit-content;
   max-width: 90%;
   word-wrap: break-word;
@@ -182,17 +187,18 @@ div[data-owner="true"].message--body {
 }
 
 .message-timestamp {
-  margin-left: 1em;
-  color: rgb(164, 161, 161);
+  color: #54546C;
+  font-size: 0.75em;
 }
 
 .delete--btn {
-  color: #8db3dd;
+  color: #54546C;
   cursor: pointer;
   transition: 0.3s;
   width: 20px;
+  margin-left: var(--spacing-1);
 }
 
 .delete--btn:hover {
-  color: red;
+  color: #EB2C2C;
 }
