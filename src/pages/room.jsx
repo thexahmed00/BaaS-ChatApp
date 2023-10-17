@@ -10,6 +10,9 @@ import Header from "../components/header";
 
 import  {useAuth}  from "../utils/AuthContext";
 
+// Import CSS
+import "../css/room.css";
+
 
 const Room = () => {
   const {user} = useAuth();
