@@ -1,0 +1,20 @@
+:root {
+    --grid-unit: 1rem;
+    /* Set the grid unit to 1rem (16px) */
+    --spacing-0: 0;
+    /* 0px (0rem) */
+    --spacing-1: calc(var(--grid-unit) * 0.5);
+    /* 8px (0.5rem) */
+    --spacing-2: var(--grid-unit);
+    /* 16px (1rem) */
+    --spacing-3: calc(var(--grid-unit) * 1.5);
+    /* 24px (1.5rem) */
+    --spacing-4: calc(var(--grid-unit) * 2);
+    /* 32px (2rem) */
+    --spacing-5: calc(var(--grid-unit) * 2.5);
+    /* 40px (2.5rem) */
+    --spacing-6: calc(var(--grid-unit) * 3);
+    /* 48px (3rem) */
+    --spacing-7: calc(var(--grid-unit) * 3.5);
+    /* 56px (3.5rem) */
+}
