@@ -33,6 +33,12 @@ body {
   margin: 20px auto;
 }
 
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
 /* Login & Register Pages */
 
 .auth--container {
@@ -78,7 +84,8 @@ textarea {
 
 /* Button Styling */
 
-.btn {
+.btn,
+button {
   padding: 0.5em 1em;
   border: none;
   border-radius: 2px;
@@ -101,6 +108,27 @@ textarea {
 
 .btn:hover {
   opacity: 0.7;
+}
+
+button.btn--submit {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5em;
+  height: fit-content;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color: #494960;
+}
+
+button.btn--submit:hover {
+  background-color: #3D3D51;
+}
+
+button.btn--submit:active {
+  background-color: #545471;
 }
 
 /* Header Styling */
@@ -136,13 +164,31 @@ textarea {
 
 #message--form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 0.5em;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor1);
+}
+
+#message--form textarea {
+  resize: vertical;
+  border-bottom: none;
+  font-size: 1em;
+  line-height: 1.25em;
+  padding: 0;
+}
+
+.textarea-wrapper {
+  width: 100%;
 }
 
 .send-btn--wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  height: 100%;
 }
 
 .message--wrapper {

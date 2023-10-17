@@ -110,6 +110,7 @@ const Room = () => {
     //display the messages
     <main className="container">
       <Header/>
+      <div className="container-wrapper">
       <div className="room--container">
         <div className="room--container--wrapper">
           {messages.map((message) => (
@@ -142,7 +143,7 @@ const Room = () => {
         </div>
       </div>
       <form onSubmit={postMessage} id="message--form">
-        <div>
+          <div className="textarea-wrapper">
           <textarea
             required
             maxLength="1000"
@@ -153,13 +154,12 @@ const Room = () => {
         </div>
 
         <div className="send-btn--wrapper">
-          <input
-            className="btn btn--secondary"
-            type="submit"
-            value={"Send"}
-          ></input>
+            <button type="submit" className="btn--submit">
+              <img src="../src/assets/paper-airplane.svg" alt="Paper airplane" />
+            </button>
         </div>
       </form>
+      </div>
     </main>
   );
 };
