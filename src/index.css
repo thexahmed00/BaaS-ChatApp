@@ -33,6 +33,12 @@ body {
   margin: 20px auto;
 }
 
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
 /* Login & Register Pages */
 
 .auth--container {
@@ -78,7 +84,8 @@ textarea {
 
 /* Button Styling */
 
-.btn {
+.btn,
+button {
   padding: 0.5em 1em;
   border: none;
   border-radius: 2px;
@@ -103,6 +110,27 @@ textarea {
   opacity: 0.7;
 }
 
+button.btn--submit {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5em;
+  height: fit-content;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color: #494960;
+}
+
+button.btn--submit:hover {
+  background-color: #3D3D51;
+}
+
+button.btn--submit:active {
+  background-color: #545471;
+}
+
 /* Header Styling */
 
 #header--wrapper {
@@ -115,14 +143,23 @@ textarea {
   border-bottom: none;
 }
 
+#header--wrapper p {
+  font-size: 1em;
+  color: #fff;
+}
+
+#header--wrapper p span {
+  color: #54546C;
+}
+
 .header--link {
-  color: #c7d8eb;
+  color: #494960;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .header--link:hover {
-  color: #8db3dd;
+  color: var(--themeColorMain);
 }
 
 /* Room Styling */
@@ -136,13 +173,31 @@ textarea {
 
 #message--form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 0.5em;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor1);
+}
+
+#message--form textarea {
+  resize: vertical;
+  border-bottom: none;
+  font-size: 1em;
+  line-height: 1.25em;
+  padding: 0;
+}
+
+.textarea-wrapper {
+  width: 100%;
 }
 
 .send-btn--wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  height: 100%;
 }
 
 .message--wrapper {
@@ -159,12 +214,17 @@ textarea {
   align-items: center;
 }
 
+.message--header p span {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
 .message--body {
   padding: 0.5em 0;
   color: var(--textColorSecondary);
   background-color: var(--themeColorMain);
-  padding: 1em;
-  border-radius: 20px;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: 18px;
   width: fit-content;
   max-width: 90%;
   word-wrap: break-word;
@@ -182,17 +242,18 @@ div[data-owner="true"].message--body {
 }
 
 .message-timestamp {
-  margin-left: 1em;
-  color: rgb(164, 161, 161);
+  color: #54546C;
+  font-size: 0.75em;
 }
 
 .delete--btn {
-  color: #8db3dd;
+  color: #54546C;
   cursor: pointer;
   transition: 0.3s;
   width: 20px;
+  margin-left: var(--spacing-1);
 }
 
 .delete--btn:hover {
-  color: red;
+  color: #EB2C2C;
 }

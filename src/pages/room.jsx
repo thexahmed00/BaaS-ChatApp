@@ -10,6 +10,9 @@ import Header from "../components/header";
 
 import  {useAuth}  from "../utils/AuthContext";
 
+// Import CSS
+import "../css/room.css";
+
 
 const Room = () => {
   const {user} = useAuth();
@@ -107,8 +110,9 @@ const Room = () => {
     //display the messages
     <main className="container">
       <Header/>
+      <div className="container-wrapper">
       <div className="room--container">
-        <div>
+        <div className="room--container--wrapper">
           {messages.map((message) => (
             <div key={message.$id} className="messages--wrapper">
               <div className="message--header">
@@ -119,25 +123,27 @@ const Room = () => {
                   {" "}
                   {formatTimestamp(message.$createdAt)}
                 </small>
-                {message.$permissions.includes(`delete(\"user:${user.$id}\")`) && (
-                  <Trash
-                  className="delete--btn"
-                  onClick={() => deleteMessage(message.$id)}
-                />)
-                  }
                
                 {/* <button className='btn btn--secondary' onClick={()=>deleteMessage(message.$id)}>Delete</button> */}
               </div>
 
-              <div data-owner={message["user-id"] === user.$id} className="message--body">
-                <span>{message.body}</span>
+              <div className="message--sent">
+                <div data-owner={message["user-id"] === user.$id} className="message--body">
+                  <span>{message.body}</span>
+                </div>
+                {message.$permissions.includes(`delete(\"user:${user.$id}\")`) && (
+                  <Trash
+                    className="delete--btn"
+                    onClick={() => deleteMessage(message.$id)}
+                  />)
+                }
               </div>
             </div>
           ))}
         </div>
       </div>
       <form onSubmit={postMessage} id="message--form">
-        <div>
+          <div className="textarea-wrapper">
           <textarea
             required
             maxLength="1000"
@@ -148,13 +154,12 @@ const Room = () => {
         </div>
 
         <div className="send-btn--wrapper">
-          <input
-            className="btn btn--secondary"
-            type="submit"
-            value={"Send"}
-          ></input>
+            <button type="submit" className="btn--submit">
+              <img src="../src/assets/paper-airplane.svg" alt="Paper airplane" />
+            </button>
         </div>
       </form>
+      </div>
     </main>
   );
 };
