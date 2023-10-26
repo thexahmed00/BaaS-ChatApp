@@ -194,11 +194,10 @@ div[data-owner="true"].message--body {
 }
 
 .delete--btn:hover {
-  color: red;
+  color: #EB2C2C;
 }
 
 /* Landing Page */
-
 
 .landing-page {
   display: flex;
