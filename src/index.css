@@ -5,10 +5,12 @@
   --secondaryBgColor: rgba(27, 27, 39, 1);
   --borderColor1: rgba(40, 41, 57, 1);
   --borderColor2: rgba(79, 86, 105, 1);
-  --textColorMain: #fff;
+  --textColorMain: #fff;  
+  --logintextcolor: Black;
   --textColorSecondary: rgb(226, 227, 232);
   --themeColorMain: rgba(219, 26, 90, 1);
   --themeColorSecondary: #386fd2;
+  --inputcolor: rgb(252, 252, 237);
 }
 
 * {
@@ -41,24 +43,81 @@ body {
 
 /* Login & Register Pages */
 
-.auth--container {
-  height: 100vh;
+
+.Auth-form-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.form--wrapper {
-  width: 600px;
-  width: 600px;
-  padding: 2em;
+.Auth-form {
+  width: 450px;
+  height: 400px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: rgb(252, 252, 237);
 }
 
-.field--wrapper {
+.Auth-form-register {
+  width: 450px;
+  height: 530px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: rgb(252, 252, 237);
+}
+
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.Auth--field {
   display: flex;
   flex-direction: column;
   gap: 1em;
   padding: 0.5em 0;
+  border-radius: 8px;
+
+}
+
+.Auth--field--input{
+  padding: 1em 2em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(219, 26, 90, 1);
+  color: #fff;
+}
+
+.Forgot--password{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  width: 25vw;
 }
 
 
@@ -69,13 +128,13 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea {
-  background: var(--mainBgColor);
+  background: var(--inputcolor);
   border: none;
   border-bottom: 1px solid var(--borderColor1);
   padding: 1rem;
   border-radius: 3px;
   width: 100%;
-  color: var(--color-light);
+  color: var(--logintextcolor);
   outline: none;
   font-size: 18px;
   text-shadow: none !important;
