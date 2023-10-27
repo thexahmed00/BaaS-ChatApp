@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
             
             console.log("logged: ",userSession)
             setUser(accountDetails);
-            nav('/');
+            nav('/landing');
         }catch(err){
             console.log(err)
         }
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
         try{
             await account.deleteSession('current');
             setUser(null);
-            nav('/');
+            nav('/landing');
         }catch(err){
             console.log(err)
         }
@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
             const userSession = await account.create(ID.unique(), credentials.email, credentials.password, credentials.name);
             console.log("userSession Register: ",userSession)
             setUser(userSession);
-            nav('/');
+            nav('/landing');
         }catch(err){
             console.log(err)
         }

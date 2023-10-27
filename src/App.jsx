@@ -5,6 +5,7 @@ import Login from './pages/login'
 import Room from './pages/room' 
 import { AuthProvider } from './utils/AuthContext'
 import RegisterPage from './pages/RegisterPage'
+import LandingPage from './pages/LandingPage'
 
 function App() {
   
@@ -16,7 +17,8 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<RegisterPage/>}/>
         <Route element={<PrivateRoutes/>}>
-        <Route path='/' element={<Room/>} />
+        <Route path='/landing' element={<LandingPage/>}/>
+        <Route path='/room' element={<Room/>} />
         </Route>
 
       </Routes>
