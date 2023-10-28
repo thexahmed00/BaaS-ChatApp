@@ -5,8 +5,8 @@
   --secondaryBgColor: rgba(27, 27, 39, 1);
   --borderColor1: rgba(40, 41, 57, 1);
   --borderColor2: rgba(79, 86, 105, 1);
+  --textColorMain: #fff;  
   --logintextcolor: Black;
-  --textColorMain: #fff;
   --textColorSecondary: rgb(226, 227, 232);
   --themeColorMain: rgba(219, 26, 90, 1);
   --themeColorSecondary: #386fd2;
@@ -79,6 +79,12 @@ body {
   font-size: 24px;
   color: rgb(34, 34, 34);
   font-weight: 800;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
 }
 
 .Auth--field {
