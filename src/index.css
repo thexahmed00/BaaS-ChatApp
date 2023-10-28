@@ -37,6 +37,7 @@ body {
 
 /* Login & Register Pages */
 
+
 .Auth-form-container {
   display: flex;
   align-items: center;
@@ -66,6 +67,12 @@ body {
   background-color: rgb(252, 252, 237);
 }
 
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
 .Auth-form-forgetpass {
   width: 450px;
   height: 450px;
@@ -74,11 +81,6 @@ body {
   padding-bottom: 20px;
   border-radius: 8px;
   background-color: rgb(252, 252, 237);
-}
-
-.Auth-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
 }
 
 .Auth-form-title {
@@ -125,6 +127,7 @@ body {
 }
 
 
+
 /* Form Input Styling */
 
 input[type="text"],
@@ -142,6 +145,7 @@ textarea {
   font-size: 18px;
   text-shadow: none !important;
 }
+
 
 /* Button Styling */
 
