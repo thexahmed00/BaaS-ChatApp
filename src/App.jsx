@@ -4,8 +4,8 @@ import PrivateRoutes from './components/privateRoutes'
 import Login from './pages/login'
 import Room from './pages/room' 
 import { AuthProvider } from './utils/AuthContext'
-import RegisterPage from './pages/RegisterPage'
 import ForgetPage from './pages/ForgetPage'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   
