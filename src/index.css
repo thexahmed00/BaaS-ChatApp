@@ -12,7 +12,7 @@
   --themeColorSecondary: #386fd2;
   --inputcolor: rgb(252, 252, 237);
 }
-  
+
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +33,12 @@ body {
 .container {
   max-width: 600px;
   margin: 20px auto;
+}
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 /* Login & Register Pages */
@@ -114,6 +120,8 @@ body {
   width: 25vw;
 }
 
+
+
 /* Form Input Styling */
 
 input[type="text"],
@@ -135,7 +143,8 @@ textarea {
 
 /* Button Styling */
 
-.btn {
+.btn,
+button {
   padding: 0.5em 1em;
   border: none;
   border-radius: 2px;
@@ -160,6 +169,27 @@ textarea {
   opacity: 0.7;
 }
 
+button.btn--submit {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5em;
+  height: fit-content;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color: #494960;
+}
+
+button.btn--submit:hover {
+  background-color: #3D3D51;
+}
+
+button.btn--submit:active {
+  background-color: #545471;
+}
+
 /* Header Styling */
 
 #header--wrapper {
@@ -172,14 +202,87 @@ textarea {
   border-bottom: none;
 }
 
+#header--wrapper p {
+  font-size: 1em;
+  color: #fff;
+}
+
+#header--wrapper p span {
+  color: #54546C;
+}
+
 .header--link {
-  color: #c7d8eb;
+  color: #494960;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .header--link:hover {
-  color: #8db3dd;
+  color: var(--themeColorMain);
+}
+
+
+/* Landing Page */
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.content {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(252, 252, 237);
+  box-shadow: 0px 0px 5px rgba(219, 26, 90, 1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+  color: black;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.button-text {
+  background-color: rgba(219, 26, 90, 1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  /* transition: background-color 0.3s; */
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  padding-top: 30px;
 }
 
 /* Room Styling */
@@ -193,13 +296,31 @@ textarea {
 
 #message--form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 0.5em;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor1);
+}
+
+#message--form textarea {
+  resize: vertical;
+  border-bottom: none;
+  font-size: 1em;
+  line-height: 1.25em;
+  padding: 0;
+}
+
+.textarea-wrapper {
+  width: 100%;
 }
 
 .send-btn--wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  height: 100%;
 }
 
 .message--wrapper {
@@ -216,12 +337,17 @@ textarea {
   align-items: center;
 }
 
+.message--header p span {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
 .message--body {
   padding: 0.5em 0;
   color: var(--textColorSecondary);
   background-color: var(--themeColorMain);
-  padding: 1em;
-  border-radius: 20px;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: 18px;
   width: fit-content;
   max-width: 90%;
   word-wrap: break-word;
@@ -239,15 +365,16 @@ div[data-owner="true"].message--body {
 }
 
 .message-timestamp {
-  margin-left: 1em;
-  color: rgb(164, 161, 161);
+  color: #54546C;
+  font-size: 0.75em;
 }
 
 .delete--btn {
-  color: #8db3dd;
+  color: #54546C;
   cursor: pointer;
   transition: 0.3s;
   width: 20px;
+  margin-left: var(--spacing-1);
 }
 
 .delete--btn:hover {
