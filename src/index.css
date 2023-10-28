@@ -5,8 +5,8 @@
   --secondaryBgColor: rgba(27, 27, 39, 1);
   --borderColor1: rgba(40, 41, 57, 1);
   --borderColor2: rgba(79, 86, 105, 1);
-  --textColorMain: #fff;
   --logintextcolor: Black;
+  --textColorMain: #fff;
   --textColorSecondary: rgb(226, 227, 232);
   --themeColorMain: rgba(219, 26, 90, 1);
   --themeColorSecondary: #386fd2;
@@ -73,16 +73,6 @@ body {
   padding-right: 12%;
 }
 
-.Auth-form-forgetpass {
-  width: 450px;
-  height: 450px;
-  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 8px;
-  background-color: rgb(252, 252, 237);
-}
-
 .Auth-form-title {
   text-align: center;
   margin-bottom: 1em;
@@ -90,13 +80,6 @@ body {
   color: rgb(34, 34, 34);
   font-weight: 800;
 }
-
-.label {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgb(34, 34, 34);
-}
-
 
 .Auth--field {
   display: flex;
