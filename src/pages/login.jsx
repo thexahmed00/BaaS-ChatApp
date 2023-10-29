@@ -19,33 +19,36 @@ const Login = () => {
         let value = e.target.value
 
         setCredentials({...credentials,[name]:value})
-       // console.log(credentials)
     }
 
   return (
-    <div className="auth--container">
-        <div className="form--wrapper">
-            <form onSubmit={(e)=>{handleLogin(e,credentials)}}>
-                <div className="field--wrapper">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" required name="email" 
+    <div className="Auth-form-container">
+        <form className="Auth-form" onSubmit={(e)=>{handleLogin(e,credentials)}}>
+            <div className="Auth-form-content">
+                <h3 className="Auth-form-title">Log In</h3>
+                <div className="form-group mt-3">
+                    <label className="label" htmlFor="email">Email</label>
+                    <input className="form-control mt-1" type="email" required name="email" 
                                 placeholder="enter your email.."
                                 value={credentials.email}
                                 onChange={handleInput}/>
                 </div>
-                <div className="field--wrapper">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" required name="password" 
+                <div className="form-group mt-3">
+                    <label className="label" htmlFor="password">Password</label>
+                    <input className="form-control mt-1" type="password" required name="password" 
                                 placeholder="enter your password.."
                                 value={credentials.password}
                                 onChange={handleInput}/>
                 </div>
-                <div className="field--wrapper">
-                    <input type="submit" value="Login" className="btn btn--lg btn--main"/>
+                <div className="Auth--field">
+                    <input type="submit" value="Login" className="Auth--field--input"/>
                 </div>
-       <p> <Link to="/register" className="link--secondary">Don't have an account? Register</Link></p>
-            </form>
+       <p className="Forgot--password"> <Link to="/register" className="link--secondary">Don't have an account? Register</Link></p>
+       <p className="Forgot--password">
+                <a href="#">Forgot password?</a>
+            </p>
         </div>    
+        </form>
     </div>
   )
 }
